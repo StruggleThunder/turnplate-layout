@@ -1,0 +1,27 @@
+.turnplate-wrap {
+  width: 680rpx;
+  height: 680rpx;
+  border: solid 1px #000;
+
+  border-radius: 50%;
+  overflow: hidden;
+
+  position: relative;
+}
+
+.fan {
+  position: absolute;
+	top: 0; 
+  right: 0;
+	width: 50%;
+  height: 50%;
+  border: solid 1px #eee;
+  transform-origin: left bottom;
+  
+  background: #f35;
+}
+
+/* 奇数颜色不同 */
+.fan:nth-of-type(odd) {
+  background: rgb(63, 138, 250); 
+}

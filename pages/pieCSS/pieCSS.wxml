@@ -1,0 +1,13 @@
+<picker style="margin-bottom: 30rpx;" bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+  <view class="picker">
+    选择转盘个数：{{num}}
+  </view>
+</picker>
+
+<view class="turnplate-wrap">
+
+  <block wx:for="{{num}}" wx:key="index">
+    <view class="fan" style="transform: rotate({{(360 / num) * index - (360 / num / 2)}}deg) skewY(-{{(90 - (360 / num))}}deg);"></view>
+  </block>
+  
+</view>

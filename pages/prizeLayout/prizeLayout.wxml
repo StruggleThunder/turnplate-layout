@@ -1,0 +1,17 @@
+<picker style="margin-bottom: 30rpx;" bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+  <view class="picker">
+    选择奖品个数：{{prizeTotal}}
+  </view>
+</picker>
+
+
+<view class="turnplate-wrap">
+  <block wx:for="{{prizeList}}" wx:key="name">
+    <view class="prize-box"
+      style="width: {{perPrize.width}}rpx; transform: translateX(-50%) rotate({{perPrize.degree * index}}deg);">
+      <view class="name">{{item.name}}</view>
+      <view class="desc">{{item.desc}}</view>
+      <image class="img" src="{{item.img}}" mode="widthFix" style="width: {{perPrize.width * .28}}rpx;"></image>
+    </view>
+  </block>
+</view>

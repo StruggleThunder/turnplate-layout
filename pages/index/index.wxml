@@ -1,0 +1,25 @@
+<view class="turnplate-wrap animation">
+
+  <!-- 扇形 -->
+  <block wx:for="{{6}}" wx:key="index">
+    <view class="fan" style="transform: rotate({{60 * index - 30}}deg) skewY(-30deg);"></view>
+  </block>
+
+  <!-- 奖品 -->
+  <block wx:for="{{6}}" wx:key="index">
+    <view class="prize-box"
+      style="width: {{perPrize.width}}rpx; transform: translateX(-50%) rotate({{perPrize.degree * index}}deg);">
+      <view class="name">这是奖品名称{{index}}</view>
+      <view class="desc">奖品描述，奖品描述{{index}}</view>
+      <image class="img" src="/images/coupon.png" mode="widthFix" style="width: {{perPrize.width * .28}}rpx;"></image>
+    </view>
+  </block>
+
+</view>
+
+
+<view style="padding: 30rpx; line-height: 2; color: rgb(19, 53, 126);">
+  <navigator url="/pages/pieCanvas/pieCanvas">底部圆形样式canvas布局 👉 </navigator>
+  <navigator url="/pages/pieCSS/pieCSS">底部圆形样式CSS布局 👉 </navigator>
+  <navigator url="/pages/prizeLayout/prizeLayout">奖品内容布局 👉 </navigator>
+</view>
